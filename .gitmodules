@@ -1,0 +1,3 @@
+[submodule "Ping-Pong-Game"]
+	path = Ping-Pong-Game
+	url = https://github.com/srimani-programmer/Ping-Pong-Game.git
