@@ -15,7 +15,8 @@ fenster.tracer(0)
 name_a = turtle.textinput("Pong", "Name der ersten Spieler*in")
 name_b = turtle.textinput("Pong", "Name der zweiten Spieler*in")
 
-
+bot_a = False
+bot_b = False
 punkte_a = 0
 punkte_b = 0
 # Spieler*innen
@@ -42,8 +43,8 @@ ball.shape("square")
 ball.color("white")
 ball.penup()
 ball.goto(0, 0)
-ball.xbewegung = 2
-ball.ybewegung = 2
+ball.xbewegung = 2 + 12
+ball.ybewegung = 2 + 12
 
 # Punktestandausgabe
 stift = turtle.Turtle()
@@ -99,8 +100,10 @@ fenster.onkeypress(schlaeger_b_runter, "Down")
 
 if name_a == "bot":
     bot_a = True
+
 if name_b == "bot":
     bot_b = True
+
 
 # das eigentliche Spiel
 while True:
@@ -108,7 +111,7 @@ while True:
 
     # Ballbewegung:
     # Geradeaus
-    time.sleep(0.01)
+    #time.sleep(0.000001)
     ball.setx(ball.xcor() + ball.xbewegung)
     ball.sety(ball.ycor() + ball.ybewegung)
 
